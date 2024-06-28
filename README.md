@@ -6,5 +6,8 @@ The theoretical background is documented in the paper, C. Wu and H.V.Burton. Eff
 ### The functionality of the main script
 
 `SE_for_CodeBasedAnalysis.R` is to calculate the standard errors of the two parameters in a lognormally distributed probabilistic seismic demand model (PSDM). The parametric PSDM has the functional form:
-$$P(EDP>edp|IM) = 1- \Phi\left(\frac{\log(edp/m_{EDP|IM})}{\sigma_{\log (EDP)|IM}}\right)$$
-where
+$$P(EDP>edp|IM) = 1- \Phi\left(\frac{\log(edp/m_{EDP|IM})}{\sigma_{\log (EDP)|IM}}\right),$$
+where $m_{EDP|IM}$ and $\sigma_{\log(EDP)|IM}$ are the conditional median and dispersion for the EDP of interest. 
+This script is used to estimate the standard errors for these two parameters, using either the inverse-Fisher method or the robust method. 
+
+
