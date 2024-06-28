@@ -10,4 +10,6 @@ $$P(EDP>edp|IM) = 1- \Phi\left(\frac{\log(edp/m_{EDP|IM})}{\sigma_{\log (EDP)|IM
 where $m_{EDP|IM}$ and $\sigma_{\log(EDP)|IM}$ are the conditional median and dispersion for the EDP of interest. 
 This script is used to estimate the standard errors for these two parameters, using either the inverse-Fisher method or the robust method. 
 
+`SE_for_RiskBasedAnalysis.R` is to calculate the standard errors of the  mean annual frequency of exceeding a given limit state, $\lambda_{ls}$, calculated through integrating a mean hazard curve and a lognormally distributed fragility function:
+$$\lambda_{ls} &= \int_{im}^{} P(LS >ls|IM=im)|d\lambda(im)| &\approx \sum_{i}^{} P(LS>ls|IM=im) |\lambda(im_{i+1}) - \lambda(im_{i})|.$$
 
